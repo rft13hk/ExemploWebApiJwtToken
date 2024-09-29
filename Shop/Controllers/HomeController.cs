@@ -31,11 +31,11 @@ namespace Shop.Controllers
             //Escondendo a senha digitado do usuário.
             user.Password = "";
 
-            return new
+            return await Task.FromResult(new
             {
                 user = user,
                 token = token
-            };
+            });
         }
 
                 [HttpGet]
